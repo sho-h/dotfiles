@@ -1,0 +1,8 @@
+# rbenv install 時に併せてインストールする RubyGems パッケージリスト。
+# c.f. https://github.com/sstephenson/rbenv-default-gems
+bundler
+pry
+rbenv-rehash
+bitclust-core
+bitclust-dev
+refe2
