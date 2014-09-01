@@ -1,0 +1,17 @@
+# grep のデフォルトオプションを指定する。
+# c.f. http://www.clear-code.com/blog/2011/9/5.html
+
+# デフォルトオプションの設定
+export GREP_OPTIONS
+# 管理用ディレクトリを無視する。
+if grep --help | grep -q -- --exclude-dir; then
+    GREP_OPTIONS="--exclude-dir=.svn $GREP_OPTIONS"
+    GREP_OPTIONS="--exclude-dir=.git $GREP_OPTIONS"
+    GREP_OPTIONS="--exclude-dir=.deps $GREP_OPTIONS"
+    GREP_OPTIONS="--exclude-dir=.libs $GREP_OPTIONS"
+fi
+
+# Local variables:
+# mode: sh
+# coding: euc-jp
+# End:

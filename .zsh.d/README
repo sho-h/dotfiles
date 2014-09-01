@@ -1,0 +1,15 @@
+= 概要
+
+ZSH の設定。
+
+= 使い方
+
+~/.zshrc に以下のように記述する。
+
+  export ZDOTDIR=~/.zsh.d
+  . $ZDOTDIR/.zshenv
+
+また、.zsh.d 以下をそのまま ~/ に配置(あるいは symlink)する。
+
+~/.zsh.d/.zshrc は自動的に読み込まれ、020_shell_options.zsh なども併せ
+て読み込まれる。
