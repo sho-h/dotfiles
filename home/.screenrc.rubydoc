@@ -1,0 +1,45 @@
+defscrollback   10000
+
+#defencoding eucJP
+#defkanji euc
+bind z windows
+bind x windows
+bind ^x windows
+bind ^g windows
+bind ^w vbell
+# bind ^b other
+bind ^b windowlist -b
+bind b other
+bind o focus
+#bind ^s sessionname
+escape ^z^z
+vbell off
+bell "Bell in window % ~"
+
+chdir /home/sho-h/local/src/rubydoc/doctree
+screen -t rubydoc1
+screen -t rubydoc2
+chdir /home/sho-h/local/src/rubydoc/bitclust
+screen -t bitclust1
+screen -t bitclust2
+chdir /home/sho-h/local/src/rubysrc/1.8/ruby-1.8.7-p358
+screen -t 1.8.7
+chdir /home/sho-h/local/src/rubysrc/1.9/ruby-1.9.1-p431
+screen -t 1.9.1
+chdir /home/sho-h/local/src/rubysrc/1.9/ruby-1.9.2-p320
+screen -t 1.9.2
+chdir /home/sho-h/local/src/rubysrc/1.9/ruby-1.9.3-p545
+screen -t 1.9.3
+chdir /home/sho-h/local/src/rubysrc/2.0/ruby-2.0.0-p451
+screen -t 2.0.0
+chdir /home/sho-h/local/src/rubysrc/2.1/ruby-2.1.0
+screen -t 2.1.0
+chdir /home/sho-h/local/src/rubysrc/2.1/ruby-2.1.1
+screen -t 2.1.1
+chdir /home/sho-h/local/src/rubysrc/trunk
+screen -t trunk
+chdir /home/sho-h/local/src/misc/rurema
+screen -t misc/rurema
+chdir /home/sho-h/
+screen -t tmp
+
