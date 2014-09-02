@@ -59,3 +59,15 @@ export PAGER=lv
 
 #! append pkg-config
 export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
+
+# http://qiita.com/y_310/items/101ef023124072b9c73f
+case ${OSTYPE} in
+  darwin*)
+    # http://qiita.com/y_310/items/101ef023124072b9c73f
+    export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
+    export MANPATH="$(brew --prefix coreutils)/libexec/gnuman:$MANPATH"
+    ;;
+  linux*)
+    #ここにLinux向けの設定
+    ;;
+esac
