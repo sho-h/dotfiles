@@ -4,9 +4,9 @@ sho-h 個人の環境のための dotfiles。
 
 ## 必要なソフトウェア
 
-* Ruby
-* homesick
 * Git
+* Ruby
+* homesick(gemパッケージ)
 
 ## インストール
 
