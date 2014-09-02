@@ -10,5 +10,23 @@ sho-h 個人の環境のための dotfiles。
 
 ## インストール
 
+dotfilesの取得。
+
     $ homesick clone sho-h/dotfiles
+
+$HOME/.gitconfig.localの作成。
+
+```
+[user]
+        name  = Taro Matsue
+        email = taromatsue@example.com
+```
+
+symlinkの作成。
+
+    $ homesick symlink dotfiles
+
+## 更新
+
+    $ homesick pull dotfiles
     $ homesick symlink dotfiles
