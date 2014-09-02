@@ -49,13 +49,21 @@ alias chkbackups='/usr/bin/find . -name "?*~" -o -name "?*.bak" -o -name ".[^.]?
 alias rmbackups='chkbackups | xargs rm'
 
 # ディレクトリのエイリアス。
-hash -d rubydoc=/home/sho-h/local/src/rubydoc/doctree
-hash -d rubysrc=/home/sho-h/local/src/rubysrc
-hash -d dldir=/home/sho-h/ダウンロード
-hash -d desktop=/home/sho-h/デスクトップ
-hash -d bookdir=/home/sho-h/local/data/books
-hash -d zsh.d=/home/sho-h/.zsh.d/
-hash -d emacs.d=/home/sho-h/.emacs.d
+hash -d rubydoc=$HOME/local/src/rubydoc/doctree
+hash -d rubysrc=$HOME/local/src/rubysrc
+hash -d bookdir=$HOME/local/data/books
+hash -d zsh.d=$HOME/.zsh.d/
+hash -d emacs.d=$HOME/.emacs.d
+case ${OSTYPE} in
+  darwin*)
+    hash -d dldir=$HOME/Downloads
+    hash -d desktop=$HOME/Desktop
+    ;;
+  linux*)
+    hash -d dldir=$HOME/ダウンロード
+    hash -d desktop=$HOME/デスクトップ
+    ;;
+esac
 
 # Local variables:
 # mode: sh
