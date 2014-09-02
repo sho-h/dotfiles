@@ -5,7 +5,11 @@ stty erase ^H
 
 # SSH でログインしている場合には変更しない。
 if [ "x$SSH_TTY" = "x" ]; then
-  xmodmap /home/sho-h/.xmodmap
+  case ${OSTYPE} in
+    linux*)
+      xmodmap ${HOME}/.xmodmap
+      ;;
+  esac
 fi
 
 # Local variables:
