@@ -1,5 +1,7 @@
 [include]
     path = .gitconfig.local
+[core]
+    pager = "lv -c"
 [alias]
     st = status
     ci = commit
