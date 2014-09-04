@@ -1,7 +1,10 @@
 # rbenv install 時に併せてインストールする RubyGems パッケージリスト。
 # c.f. https://github.com/sstephenson/rbenv-default-gems
 bundler
+brewdler
 pry
+pry-byebug
+pry-doc
 rbenv-rehash
 bitclust-core
 bitclust-dev
