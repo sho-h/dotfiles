@@ -50,10 +50,12 @@ cask install skype
 cask install sequel-pro
 cask install wireshark
 cask install apikitchen
+cask install cheatsheet
 
 # その他
 cask install keepassx
 cask install adobe-reader
 cask install libreoffice
+cask install thunderbird
 
 cleanup
