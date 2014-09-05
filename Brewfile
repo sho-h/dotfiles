@@ -16,6 +16,7 @@ install wget
 install tig
 install imagemagick
 install nodejs
+install jq
 
 # Ruby
 install rbenv
