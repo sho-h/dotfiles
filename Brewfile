@@ -58,5 +58,6 @@ cask install keepassx
 cask install adobe-reader
 cask install libreoffice
 cask install thunderbird
+cask install clamxav
 
 cleanup
