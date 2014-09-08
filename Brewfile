@@ -17,6 +17,8 @@ install tig
 install imagemagick
 install nodejs
 install jq
+# tap homebrew/dupes
+# install ncurses
 
 # Ruby
 install rbenv
