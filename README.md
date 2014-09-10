@@ -7,6 +7,7 @@ sho-h 個人の環境のための dotfiles。
 * Git
 * Ruby
 * homesick(gemパッケージ)
+* Homebrew
 
 ## インストール
 
@@ -25,6 +26,12 @@ $HOME/.gitconfig.localの作成。
 symlinkの作成。
 
     $ homesick symlink dotfiles
+
+以下、Mac の場合は追加で実行する。(TODO: 最近の方法に修正)
+
+    $ cd
+    $ brew bundle
+    # TODO: 修正する
 
 ## 更新
 
