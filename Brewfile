@@ -3,6 +3,8 @@
 update
 upgrade
 
+tap caskroom/homebrew-versions
+
 # 基本ツール
 install coreutils
 install lv
@@ -38,7 +40,7 @@ cask install karabiner
 
 # ブラウザ
 cask install google-chrome
-cask install firefox
+cask install firefox-ja
 
 # テキストエディタ&メモ
 # cask install sublime-text
@@ -59,7 +61,7 @@ cask install cheatsheet
 # cask install keepassx
 cask install adobe-reader
 cask install libreoffice
-cask install thunderbird
+cask install thunderbird-ja
 cask install clamxav
 
 cleanup
