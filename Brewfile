@@ -58,7 +58,7 @@ cask install apikitchen
 cask install cheatsheet
 
 # その他
-# cask install keepassx
+cask install keepassx0
 cask install adobe-reader
 cask install libreoffice
 cask install thunderbird-ja
