@@ -1,0 +1,6 @@
+(mc-setversion "gpg")
+(load-library "mailcrypt")
+(autoload 'mc-install-write-mode "mailcrypt" nil t)
+(autoload 'mc-install-read-mode "mailcrypt" nil t)
+(setq mc-passwd-timeout 1800)
+(setq mc-encrypt-for-me t)

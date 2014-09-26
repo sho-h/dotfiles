@@ -1,0 +1,11 @@
+; ChangeLog.rd memo
+(load "change-log-rd")
+(define-key ctl-x-4-map "p" 'add-change-log-rd-entry-other-window)
+
+; change log memo
+(defun memo ()
+  (interactive)
+    (add-change-log-rd-entry
+     nil
+     (expand-file-name "~/private/memo/memo.rd")))
+(define-key ctl-x-map "M" 'memo)
