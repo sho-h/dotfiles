@@ -21,6 +21,11 @@ install nodejs
 install jq
 # tap homebrew/dupes
 # install ncurses
+install libffi
+
+# Emacs
+install --cocoa -srgb --with-gnutls --japanese emacs
+install cask
 
 # Ruby
 install rbenv
