@@ -32,8 +32,8 @@ chdir $HOME/local/src/rubysrc/ruby-1.9.3-p547
 screen -t 1.9.3
 chdir $HOME/local/src/rubysrc/ruby-2.0.0-p481
 screen -t 2.0.0
-chdir $HOME/local/src/rubysrc/ruby-2.1.1
-screen -t 2.1.1
+chdir $HOME/local/src/rubysrc/ruby-2.1.3
+screen -t 2.1.3
 chdir $HOME/local/src/rubysrc/ruby-2.2.0-preview1
 screen -t 2.2.0
 chdir $HOME/local/src/rubysrc/trunk
