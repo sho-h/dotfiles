@@ -24,7 +24,8 @@ install jq
 install libffi
 
 # Emacs
-install --cocoa -srgb --with-gnutls --japanese emacs
+# ダイアログの操作が効かないため、dmgの方を使うことにした。
+# install --cocoa -srgb --with-gnutls --japanese emacs
 install cask
 
 # Ruby
