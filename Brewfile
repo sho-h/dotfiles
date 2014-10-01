@@ -62,6 +62,7 @@ cask install sequel-pro
 cask install wireshark
 cask install apikitchen
 cask install cheatsheet
+cask install dash
 
 # その他
 cask install keepassx0
@@ -69,5 +70,6 @@ cask install adobe-reader
 cask install libreoffice
 cask install thunderbird-ja
 cask install clamxav
+cask install iterm2
 
 cleanup
