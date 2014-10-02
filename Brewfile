@@ -63,6 +63,7 @@ cask install wireshark
 cask install apikitchen
 cask install cheatsheet
 cask install dash
+cask install java
 
 # その他
 cask install keepassx0
