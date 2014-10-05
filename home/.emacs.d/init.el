@@ -35,7 +35,7 @@
 
 ; 日本語のインクリメンタル検索を行う。
 ; migemo と一緒にインストールできる。
-(load "migemo/migemo")
+(load "init-migemo")
 
 ; PDF ファイルや PS ファイルを Emacs 上で読めるようにする。
 ; * M-x install-elisp-from-emacswiki doc-view.el
