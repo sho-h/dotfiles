@@ -45,6 +45,7 @@
 (depends-on "ruby-block-mode")
 (depends-on "ruby-end-mode")
 (depends-on "rspec-mode")
+(depends-on "rsense")
 (depends-on "migemo")
 
 (depends-on "auto-complete")
