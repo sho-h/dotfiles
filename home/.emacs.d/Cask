@@ -27,6 +27,11 @@
 (depends-on "web-mode")
 (depends-on "yasnippet")
 
+(depends-on "auto-install")
+(depends-on "anything-complete")
+(depends-on "anything-config")
+(depends-on "anything-match-plugin")
+(depends-on "anything-show-completion")
 (depends-on "desktop")
 (depends-on "psvn")
 (depends-on "csharp-mode")
@@ -40,6 +45,7 @@
 (depends-on "ruby-block-mode")
 (depends-on "ruby-end-mode")
 (depends-on "rspec-mode")
+(depends-on "migemo")
 
 (depends-on "auto-complete")
 
