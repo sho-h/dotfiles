@@ -47,6 +47,7 @@
 (depends-on "rspec-mode")
 (depends-on "rsense")
 (depends-on "migemo")
+(depends-on "hexrgb")
 
 (depends-on "auto-complete")
 
