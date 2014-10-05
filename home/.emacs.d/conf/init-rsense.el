@@ -17,5 +17,11 @@
           (lambda ()
             (local-set-key (kbd "C-c .") 'ac-complete-rsense)))
 
+; . や :: を入力した直後に自動的に補完を開始
+(add-hook 'ruby-mode-hook
+          (lambda ()
+            (add-to-list 'ac-sources 'ac-source-rsense-method)
+            (add-to-list 'ac-sources 'ac-source-rsense-constant)))
+
 ; るりまを参照
 (setq rsense-rurema-home (expand-file-name "~/local/src/refm"))
