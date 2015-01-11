@@ -69,6 +69,12 @@ case ${OSTYPE} in
     # http://qiita.com/y_310/items/101ef023124072b9c73f
     export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
     export MANPATH="$(brew --prefix coreutils)/libexec/gnuman:$MANPATH"
+
+    # http://qiita.com/seri_k/items/e978c1339ce51f13e297
+    export JAVA_HOME=`/usr/libexec/java_home`
+
+    # homebrew でインストールした git を優先して使用。
+    export PATH=`brew --prefix git`/bin:$PATH
     ;;
   linux*)
     #ここにLinux向けの設定
