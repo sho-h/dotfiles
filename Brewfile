@@ -4,6 +4,7 @@ update
 upgrade
 
 tap caskroom/homebrew-versions
+tap homebrew/binary
 
 # 基本ツール
 install coreutils
@@ -13,6 +14,7 @@ install pwgen
 install openssl
 install nkf
 install wget
+install git
 
 # 開発ツール
 install tig
@@ -22,6 +24,9 @@ install jq
 # tap homebrew/dupes
 # install ncurses
 install libffi
+install pdftk
+install mecab
+install mecab-ipadic
 
 # Emacs
 # ダイアログの操作が効かないため、dmgの方を使うことにした。
@@ -36,6 +41,7 @@ install rbenv-gemset
 install rbenv-default-gems
 
 tap phinze/homebrew-cask
+# tap sho-h/homebrew-cask
 install brew-cask
 
 # 設定補助
@@ -70,8 +76,11 @@ cask install java
 cask install keepassx0
 cask install adobe-reader
 cask install libreoffice
+# cask install libreoffice-langpack-ja
 cask install thunderbird-ja
 cask install clamxav
 cask install iterm2
+cask install google-japanese-ime
+cask install virtualbox
 
 cleanup
