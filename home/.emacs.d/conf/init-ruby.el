@@ -36,6 +36,13 @@
 ; magic-commentの挿入を抑制
 (setq ruby-insert-encoding-magic-comment nil)
 
+; Rails用にprojectile-modeを有効にする。
+(require 'projectile)
+(projectile-global-mode)
+
+(require 'projectile-rails)
+(add-hook 'projectile-mode-hook 'projectile-rails-on)
+
 ; https://github.com/flycheck/flycheck
 (require 'flycheck)
 (setq flycheck-check-syntax-automatically '(mode-enabled save))
