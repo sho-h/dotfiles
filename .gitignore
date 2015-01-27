@@ -2,4 +2,6 @@
 .bundle
 .zcompdump
 Gemfile.lock
+ac-comphist.dat
+projectile-bookmarks.eld
 vendor
