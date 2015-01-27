@@ -13,6 +13,7 @@
 
 (load "init-japanese")
 (load "init-basis")
+(load "init-flycheck")
 (load "init-c")
 (load "init-csharp")
 (load "init-ruby")

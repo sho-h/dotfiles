@@ -43,10 +43,9 @@
 (require 'projectile-rails)
 (add-hook 'projectile-mode-hook 'projectile-rails-on)
 
-; https://github.com/flycheck/flycheck
-(require 'flycheck)
-(setq flycheck-check-syntax-automatically '(mode-enabled save))
 (add-hook 'ruby-mode-hook 'flycheck-mode)
+; TODO: 以下を追加。
+; * ruby-rubocop
 
 ; ファイルの保存時に brakeman でチェックする。
 ; (flycheck-define-checker rails-brakeman
