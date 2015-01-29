@@ -32,7 +32,8 @@
 (load "init-anything-rcodetools")
 (load "init-auto-complete")
 (load "init-rsense")
-(load "init-one-key")
+; TODO: region操作がうまくできなくなるのを修正して再度有効にする。
+; (load "init-one-key")
 
 ; 日本語のインクリメンタル検索を行う。
 ; migemo と一緒にインストールできる。
