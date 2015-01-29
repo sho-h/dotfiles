@@ -48,26 +48,10 @@
 ; * ruby-rubocop
 
 ; ファイルの保存時に brakeman でチェックする。
-; (flycheck-define-checker rails-brakeman
+; TODO: Railsでのみ動かす事が可能であれば、ruby -cの部分は元の動作にする。
 (flycheck-define-checker ruby
-  "A Ruby on Rails vulnerability checker using brakeman."
-  ; source-originalではなくsourceにした場合、該当のファイルのみ一時ファ
-  ; イルとしてコピーされてbrakeman実行時にRailsアプリとして認識してもら
-  ; えない。このままだと短時間に(具体的にはbrakemanが終わる前に)繰り返
-  ; し保存すると問題がある可能性があるが、それは諦める。
-  ; TODO: /tmp/check-brakeman.shは以下のような内容のファイル。このまま
-  ; だとダサいのでもう少しよい内容にする。
-  ;    #!/bin/sh
-  ;
-  ;    export PATH="/usr/local/bin/:$PATH"
-  ;    eval "$(rbenv init - zsh)"
-  ;
-  ;    rails_root=`bundle exec rake about | grep "Application root" | awk '{print $3}'`
-  ;    if [ "x${rails_root}" != "x" ]; then
-  ;      bundle exec brakeman ${rails_root} -f json | ruby -r json -e 'JSON.parse(STDIN.read)["warnings"].collect {|h| path = h["file"].gsub(File.dirname(h["file"]), File.dirname(ARGV[0])); [path, h["line"], h["warning_type"], h["message"]].join(":")}.each {|s| STDERR.puts s}' $1
-  ;      exit 1
-  ;    fi
-  :command ("/tmp/check-brakeman.sh" source-original)
+  "A Ruby Syntax cheker/A Ruby on Rails vulnerability checker using brakeman."
+  :command ("~/.emacs.d/scripts/rb-audit.sh" source-original)
   :error-patterns  ((error line-start
                            (file-name) ":" line ":" (message)
                            line-end))
