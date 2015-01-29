@@ -52,7 +52,12 @@
 (flycheck-define-checker ruby
   "A Ruby Syntax cheker/A Ruby on Rails vulnerability checker using brakeman."
   :command ("~/.emacs.d/scripts/rb-audit.sh" source-original)
-  :error-patterns  ((error line-start
-                           (file-name) ":" line ":" (message)
-                           line-end))
-  :modes (ruby-mode))
+  :error-patterns ((error line-start
+                          (file-name) ":" line ":" (message) line-end)
+                   (error line-start
+                          "SyntaxError in " (file-name) ":" line ": "
+                          (message) line-end)
+                   (warning line-start
+                            (file-name) ":" line ":" (optional column ":")
+                            " warning: " (message) line-end))
+  :modes (enh-ruby-mode ruby-mode))
