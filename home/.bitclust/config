@@ -1,0 +1,14 @@
+---
+:database_prefix: "/Users/sho-h/local/src/rubydoc/bitclust/db/db"
+:encoding: utf-8
+:versions:
+- 1.9.3
+- 2.0.0
+- 2.1.0
+- 2.2.0
+:default_version: 2.1.0
+:stdlibtree: "/Users/sho-h/local/src/rubydoc/doctree/refm/api/src/"
+:capi_src: "/Users/sho-h/local/src/rubydoc/doctree/refm/capi/src/"
+:baseurl: http://localhost:10080
+:port: '10080'
+:pid_file: "/tmp/bitclust.pid"
