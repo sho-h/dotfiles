@@ -15,6 +15,7 @@ install openssl
 install nkf
 install wget
 install git
+install w3m
 
 # 開発ツール
 install tig
@@ -27,6 +28,7 @@ install libffi
 install pdftk
 install mecab
 install mecab-ipadic
+install gnupg
 
 # Emacs
 # ダイアログの操作が効かないため、dmgの方を使うことにした。
@@ -82,5 +84,6 @@ cask install clamxav
 cask install iterm2
 cask install google-japanese-ime
 cask install virtualbox
+cask install macid
 
 cleanup
