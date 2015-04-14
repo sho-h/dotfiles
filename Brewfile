@@ -61,6 +61,7 @@ cask install firefox-ja
 # cask install sublime-text
 cask install atom
 # cask install kobito
+cask install macdown
 
 # チャットなど
 cask install limechat
@@ -75,7 +76,7 @@ cask install dash
 cask install java
 
 # その他
-cask install keepassx0
+cask install dwihn0r-keepassx
 cask install adobe-reader
 cask install libreoffice
 # cask install libreoffice-langpack-ja
