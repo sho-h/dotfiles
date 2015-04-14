@@ -32,10 +32,10 @@ chdir $HOME/local/src/rubysrc/ruby-1.9.3-p547
 screen -t 1.9.3
 chdir $HOME/local/src/rubysrc/ruby-2.0.0-p643
 screen -t 2.0.0
-chdir $HOME/local/src/rubysrc/ruby-2.1.5
-screen -t 2.1.5
-chdir $HOME/local/src/rubysrc/ruby-2.2.1
-screen -t 2.2.1
+chdir $HOME/local/src/rubysrc/ruby-2.1.6
+screen -t 2.1.6
+chdir $HOME/local/src/rubysrc/ruby-2.2.2
+screen -t 2.2.2
 chdir $HOME/local/src/rubysrc/trunk
 screen -t trunk
 chdir $HOME/local/src/misc/rurema
