@@ -9,17 +9,18 @@ setopt no_clobber
 setopt correct
 #setopt correct_all
 
+# historyЕ╓┴Ф∙╟Ц│▄MacД╦┼Ц│╝zshЦ│╖Е╠╔Ф╜╢Ф╓°Г╢╒Ц│≈Ц│÷Е═╢Е░┬Ц│╚Ф≥┌Е┬╩Ц│▄Е╠╔Ф╜╢Ц│╚Е░╚Ц│╬Ц┌▄Ц│╕Ц│≈Ц│╬Ц│├Ц│÷Ц┌│Г└║Е┼╧Ц│╚Ц│≈Ц│÷Ц─┌
 #! extended command completion
-setopt extended_history
+# setopt extended_history
 
 #setopt append_history
 #setopt inc_append_history
 setopt share_history
 
-# ╔Ё╔ч╔С╔и╧т╓╚╓И╔р╔╧╔х╔Й╔Й╔╧╔х╓кди╡ц╓╣╓Л╓©╓Б╓н╓╛╦е╓╓╓Б╓н╓ха╢╓╞ф╠╓╦╬Л╧Г
-# ╓к║╒╦е╓╓╓Б╓н╓Р╔Й╔╧╔х╓╚╓И╨О╫Э╓╧╓К(╓╫╓Л╓╛д╬а╟╓н╔╓╔ы╔С╔х╓г╓й╓╞╓ф╓Б)║ё
+# Ц┌ЁЦ┐·Ц┐ЁЦ┐┴Х║▄Ц│▀Ц┌┴Ц┐▓Ц┌╧Ц┐┬Ц┐╙Ц┐╙Ц┌╧Ц┐┬Ц│╚Х©╫Е┼═Ц│∙Ц┌▄Ц│÷Ц┌┌Ц│╝Ц│▄Е▐╓Ц│└Ц┌┌Ц│╝Ц│╗Е┘╗Ц│▐Е░▄Ц│≤Е═╢Е░┬
+# Ц│╚Ц─│Е▐╓Ц│└Ц┌┌Ц│╝Ц┌▓Ц┐╙Ц┌╧Ц┐┬Ц│▀Ц┌┴Е┴┼И≥╓Ц│≥Ц┌▀(Ц│²Ц┌▄Ц│▄Г⌡╢Е┴█Ц│╝Ц┌╓Ц┐≥Ц┐ЁЦ┐┬Ц│╖Ц│╙Ц│▐Ц│╕Ц┌┌)Ц─┌
 #setopt hist_ignore_all_dups
-# ╔р╔╧╔х╔Й╔у╔║╔╓╔К╓к╫Я╓╜╫п╓╧╓х╓╜╓к║╒╦е╓╓╔Ё╔ч╔С╔и╓хф╠╓╦╓Б╓н╓ол╣╩К╓╧╓К║ё
+# Ц┐▓Ц┌╧Ц┐┬Ц┐╙Ц┐∙Ц┌║Ц┌╓Ц┐╚Ц│╚Ф⌡╦Ц│█Е┤╨Ц│≥Ц│╗Ц│█Ц│╚Ц─│Е▐╓Ц│└Ц┌ЁЦ┐·Ц┐ЁЦ┐┴Ц│╗Е░▄Ц│≤Ц┌┌Ц│╝Ц│╞Г└║Х╕√Ц│≥Ц┌▀Ц─┌
 setopt hist_save_nodups
 #setopt hist_ignore_dups
 
@@ -31,5 +32,5 @@ setopt hist_ignore_space
 
 # Local variables:
 # mode: sh
-# coding: euc-jp
+# coding: utf-8
 # End:
