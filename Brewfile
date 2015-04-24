@@ -5,6 +5,7 @@ upgrade
 
 tap caskroom/homebrew-versions
 tap homebrew/binary
+tap peco/peco
 
 # 基本ツール
 install coreutils
@@ -16,6 +17,7 @@ install nkf
 install wget
 install git
 install w3m
+install peco
 
 # 開発ツール
 install tig
