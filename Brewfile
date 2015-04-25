@@ -18,6 +18,8 @@ install wget
 install git
 install w3m
 install peco
+install zsh
+install zsh-completions
 
 # 開発ツール
 install tig
