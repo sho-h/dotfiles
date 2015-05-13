@@ -40,6 +40,27 @@ zle -N peco-select-git-add
 
 bindkey "^g^a" peco-select-git-add
 
+# gemの保存先に移動(戻りたい場合は $ cd -)。
+function peco-cd-gem() {
+  local gem_name=$(bundle list | sed -e 's/^ *\* *//g' | peco | cut -d \  -f 1)
+  if [ -n "$gem_name" ]; then
+    local gem_dir=$(bundle show ${gem_name})
+    echo "cd to ${gem_dir}"
+    cd ${gem_dir}
+  fi
+}
+alias pcdg="peco-cd-gem"
+
+# ~/.ssh/configからsshで接続する候補を選択。
+function peco-ssh() {
+  local result=$(grep ^Host ~/.ssh/config |awk '{print $2}' | grep -v '*' | peco)
+
+  if [ -n "$result" ]; then
+    \ssh ${result}
+  fi
+}
+alias pes="peco-ssh"
+
 # Local variables:
 # mode: sh
 # coding: utf-8
