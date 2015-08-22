@@ -15,7 +15,7 @@ alias rm='rm -i'
 alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -CF'
-alias svn='LANG=C svn'
+#alias svn='LANG=C svn'
 alias psrb='ps ax | grep "[r]uby"'
 
 #alias -g L='| lv'
