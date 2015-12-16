@@ -18,26 +18,29 @@ bell "Bell in window % ~"
 
 chdir $HOME/local/src/rubydoc/doctree
 screen -t rubydoc1
-screen -t rubydoc2
 chdir $HOME/local/src/rubydoc/bitclust
 screen -t bitclust1
 screen -t bitclust2
-chdir $HOME/local/src/rubysrc/ruby-1.8.7-p358
-screen -t 1.8.7
-chdir $HOME/local/src/rubysrc/ruby-1.9.1-p431
-screen -t 1.9.1
-chdir $HOME/local/src/rubysrc/ruby-1.9.2-p330
-screen -t 1.9.2
-chdir $HOME/local/src/rubysrc/ruby-1.9.3-p547
-screen -t 1.9.3
-chdir $HOME/local/src/rubysrc/ruby-2.0.0-p647
-screen -t 2.0.0
-chdir $HOME/local/src/rubysrc/ruby-2.1.7
-screen -t 2.1.7
+chdir $HOME/local/src/rubysrc/svn
+screen -t svn
+chdir $HOME/local/src/rubysrc/git
+screen -t git
+chdir $HOME/local/src/rubysrc/ruby-2.3.0-preview2
+screen -t 2.3.0
 chdir $HOME/local/src/rubysrc/ruby-2.2.3
 screen -t 2.2.3
-chdir $HOME/local/src/rubysrc/trunk
-screen -t trunk
+chdir $HOME/local/src/rubysrc/ruby-2.1.7
+screen -t 2.1.7
+chdir $HOME/local/src/rubysrc/ruby-2.0.0-p647
+screen -t 2.0.0
+chdir $HOME/local/src/rubysrc/ruby-1.9.3-p547
+screen -t 1.9.3
+chdir $HOME/local/src/rubysrc/ruby-1.9.2-p330
+screen -t 1.9.2
+chdir $HOME/local/src/rubysrc/ruby-1.9.1-p431
+screen -t 1.9.1
+chdir $HOME/local/src/rubysrc/ruby-1.8.7-p358
+screen -t 1.8.7
 chdir $HOME/local/src/misc/rurema
 screen -t misc/rurema
 chdir $HOME/
