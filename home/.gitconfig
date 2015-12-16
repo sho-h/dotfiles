@@ -3,6 +3,7 @@
 [core]
     pager = "lv -c"
     quotepath = false
+    notesRef = refs/notes/ruby-trunk-changes
 [alias]
     st = status
     ci = commit
@@ -14,3 +15,6 @@
       curl \"https://www.gitignore.io/api/$s\"; }; f"
 [diff]
     renames = copies
+[remote "k-tsj"]
+    fetch = +refs/notes/*:refs/notes/*
+    url = git://github.com/k-tsj/ruby.git
