@@ -3,6 +3,7 @@
 [core]
     pager = "lv -c"
     quotepath = false
+    excludesfile = /Users/sho-h/.gitignore
     notesRef = refs/notes/ruby-trunk-changes
 [alias]
     st = status
