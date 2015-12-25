@@ -43,6 +43,7 @@ alias snv='svn'
 alias s='svn'
 alias g='git'
 alias r='rails'
+alias cjp='curl -H "Accept: application/json" -H "Content-type: application/json" -X POST'
 
 # backup files display and remove command
 alias chkbackups='/usr/bin/find . -name "?*~" -o -name "?*.bak" -o -name ".[^.]?*~" -o -name ".[^.]?*.bak" -maxdepth 1'
