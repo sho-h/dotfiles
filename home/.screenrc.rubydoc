@@ -25,7 +25,7 @@ chdir $HOME/local/src/rubysrc/svn
 screen -t svn
 chdir $HOME/local/src/rubysrc/git
 screen -t git
-chdir $HOME/local/src/rubysrc/ruby-2.3.0-preview2
+chdir $HOME/local/src/rubysrc/ruby-2.3.0
 screen -t 2.3.0
 chdir $HOME/local/src/rubysrc/ruby-2.2.3
 screen -t 2.2.3
