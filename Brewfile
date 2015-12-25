@@ -20,6 +20,7 @@ install w3m
 install peco
 install zsh
 install zsh-completions
+install lha
 
 # 開発ツール
 install tig
