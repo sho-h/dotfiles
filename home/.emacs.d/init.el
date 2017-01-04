@@ -1,3 +1,11 @@
+; exec-pathに/usr/local/binを追加。
+; TODO: 可能なら以下の形式とする(Spotlightからだとzshを経由しないのだろ
+; う。PATHに/usr/local/binが含まれない)
+; (setq exec-path (parse-colon-path (getenv "PATH")))
+(when (eq system-type 'darwin)
+      (setq exec-path
+            (cons "/usr/local/bin" exec-path)))
+
 ; load-path の設定を行う。
 ; http://github.com/aircastle/dot-emacs-dot-d
 (defun add-to-load-path (&rest paths)
