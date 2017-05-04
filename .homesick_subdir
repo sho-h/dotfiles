@@ -1,0 +1,8 @@
+.bitclust
+.config/peco
+.eamcs.d
+.irbrc.d
+.rbenv
+.rbenv/rbenv.d/global/
+.zsh.d
+Library/LaunchAgents/
