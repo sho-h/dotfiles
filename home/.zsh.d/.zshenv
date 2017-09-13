@@ -63,6 +63,9 @@ export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
 # http://qiita.com/y_310/items/101ef023124072b9c73f
 case ${OSTYPE} in
   darwin*)
+    # http://karur4n.hatenablog.com/entry/2016/01/18/100000
+    setopt no_global_rcs
+
     # 濁音・半濁音を <3099> <309a> のように表示しない
     setopt combining_chars
 
