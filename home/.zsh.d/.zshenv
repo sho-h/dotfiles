@@ -12,10 +12,10 @@ $HOME/local/sbin
 $HOME/bin
 /sbin
 /bin
-/usr/sbin
-/usr/bin
 /usr/local/sbin
 /usr/local/bin
+/usr/sbin
+/usr/bin
 /usr/X11R6/bin
 )
 
@@ -75,6 +75,9 @@ case ${OSTYPE} in
 
     # homebrew でインストールした git を優先して使用。
     export PATH=`brew --prefix git`/bin:$PATH
+
+    # homebrew でインストールした curl を優先して使用。
+    export PATH=`brew --prefix curl`/bin:$PATH
     ;;
   linux*)
     #ここにLinux向けの設定
