@@ -1,6 +1,6 @@
-; exec-path¤Ë/usr/local/bin¤òÄÉ²Ã¡£
-; TODO: ²ÄÇ½¤Ê¤é°Ê²¼¤Î·Á¼°¤È¤¹¤ë(Spotlight¤«¤é¤À¤Èzsh¤ò·ĞÍ³¤·¤Ê¤¤¤Î¤À¤í
-; ¤¦¡£PATH¤Ë/usr/local/bin¤¬´Ş¤Ş¤ì¤Ê¤¤)
+; exec-pathã«/usr/local/binã‚’è¿½åŠ ã€‚
+; TODO: å¯èƒ½ãªã‚‰ä»¥ä¸‹ã®å½¢å¼ã¨ã™ã‚‹(Spotlightã‹ã‚‰ã ã¨zshã‚’çµŒç”±ã—ãªã„ã®ã ã‚
+; ã†ã€‚PATHã«/usr/local/binãŒå«ã¾ã‚Œãªã„)
 ; (setq exec-path (parse-colon-path (getenv "PATH")))
 
 ;; Added by Package.el.  This must come before configurations of
@@ -13,7 +13,7 @@
       (setq exec-path
             (cons "/usr/local/bin" exec-path)))
 
-; load-path ¤ÎÀßÄê¤ò¹Ô¤¦¡£
+; load-path ã®è¨­å®šã‚’è¡Œã†ã€‚
 ; http://github.com/aircastle/dot-emacs-dot-d
 (defun add-to-load-path (&rest paths)
   (mapc '(lambda (path)
@@ -49,22 +49,22 @@
 (load "init-anything-rcodetools")
 (load "init-auto-complete")
 (load "init-rsense")
-; TODO: regionÁàºî¤¬¤¦¤Ş¤¯¤Ç¤­¤Ê¤¯¤Ê¤ë¤Î¤ò½¤Àµ¤·¤ÆºÆÅÙÍ­¸ú¤Ë¤¹¤ë¡£
+; TODO: regionæ“ä½œãŒã†ã¾ãã§ããªããªã‚‹ã®ã‚’ä¿®æ­£ã—ã¦å†åº¦æœ‰åŠ¹ã«ã™ã‚‹ã€‚
 ; (load "init-one-key")
 
-; ÆüËÜ¸ì¤Î¥¤¥ó¥¯¥ê¥á¥ó¥¿¥ë¸¡º÷¤ò¹Ô¤¦¡£
-; migemo ¤È°ì½ï¤Ë¥¤¥ó¥¹¥È¡¼¥ë¤Ç¤­¤ë¡£
+; æ—¥æœ¬èªã®ã‚¤ãƒ³ã‚¯ãƒªãƒ¡ãƒ³ã‚¿ãƒ«æ¤œç´¢ã‚’è¡Œã†ã€‚
+; migemo ã¨ä¸€ç·’ã«ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã§ãã‚‹ã€‚
 (load "init-migemo")
 
-; PDF ¥Õ¥¡¥¤¥ë¤ä PS ¥Õ¥¡¥¤¥ë¤ò Emacs ¾å¤ÇÆÉ¤á¤ë¤è¤¦¤Ë¤¹¤ë¡£
+; PDF ãƒ•ã‚¡ã‚¤ãƒ«ã‚„ PS ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ Emacs ä¸Šã§èª­ã‚ã‚‹ã‚ˆã†ã«ã™ã‚‹ã€‚
 ; * M-x install-elisp-from-emacswiki doc-view.el
-; * M-x doc-view ¤·¤Æ ¥Õ¥¡¥¤¥ëÌ¾¤ò»ØÄê
-; * n ¥­¡¼²¡²¼¤Ç¼¡¤Î¥Ú¡¼¥¸
-; * p ¥­¡¼²¡²¼¤ÇÁ°¤Î¥Ú¡¼¥¸
+; * M-x doc-view ã—ã¦ ãƒ•ã‚¡ã‚¤ãƒ«åã‚’æŒ‡å®š
+; * n ã‚­ãƒ¼æŠ¼ä¸‹ã§æ¬¡ã®ãƒšãƒ¼ã‚¸
+; * p ã‚­ãƒ¼æŠ¼ä¸‹ã§å‰ã®ãƒšãƒ¼ã‚¸
 (require 'doc-view)
 
-; TODO: ÀßÄê¤¬Áı¤¨¤ë¤è¤¦¤Ç¤¢¤ì¤Ğ¡¢ÊÌ¤Î¥Õ¥¡¥¤¥ë¤Ë¤¹¤ë¡£
-; kill-ring ¤ÎÉ½¼¨¤Ë anything ¤ò»ÈÍÑ¤¹¤ë¡£
+; TODO: è¨­å®šãŒå¢—ãˆã‚‹ã‚ˆã†ã§ã‚ã‚Œã°ã€åˆ¥ã®ãƒ•ã‚¡ã‚¤ãƒ«ã«ã™ã‚‹ã€‚
+; kill-ring ã®è¡¨ç¤ºã« anything ã‚’ä½¿ç”¨ã™ã‚‹ã€‚
 (global-set-key "\M-y" 'anything-show-kill-ring)
-; 5Ê¸»ú°Ê¾å¤òÊä´°¤ÎÂĞ¾İ¤È¤¹¤ë¡£
+; 5æ–‡å­—ä»¥ä¸Šã‚’è£œå®Œã®å¯¾è±¡ã¨ã™ã‚‹ã€‚
 (setq anything-kill-ring-threshold 5)

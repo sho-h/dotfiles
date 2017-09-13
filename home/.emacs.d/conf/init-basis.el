@@ -1,33 +1,33 @@
-; = ³µÍ×
+; = æ¦‚è¦
 ;
-; Emacs ¤Î´ğËÜÅª¤ÊÀßÄê¤ò¹Ô¤¦¡£°Ê²¼¤ËÊ¬Îà¤·¤Æµ­½Ò¤µ¤ì¤Æ¤¤¤ë¡£
+; Emacs ã®åŸºæœ¬çš„ãªè¨­å®šã‚’è¡Œã†ã€‚ä»¥ä¸‹ã«åˆ†é¡ã—ã¦è¨˜è¿°ã•ã‚Œã¦ã„ã‚‹ã€‚
 ;
-; * ¥­¡¼¥Ğ¥¤¥ó¥É¤Ë´ØÏ¢¤¹¤ëÀßÄê
-; * ¥¦¥£¥ó¥É¥¦¥µ¥¤¥º¤Ê¤É¡¢¥Æ¥­¥¹¥È¤ÎÊÔ½¸¤Ë´ØÏ¢¤·¤Ê¤¤ÀßÄê
-; * ¤½¤ÎÂ¾¤ÎÀßÄê
+; * ã‚­ãƒ¼ãƒã‚¤ãƒ³ãƒ‰ã«é–¢é€£ã™ã‚‹è¨­å®š
+; * ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã‚µã‚¤ã‚ºãªã©ã€ãƒ†ã‚­ã‚¹ãƒˆã®ç·¨é›†ã«é–¢é€£ã—ãªã„è¨­å®š
+; * ãã®ä»–ã®è¨­å®š
 ;
-; »È¤¤Êı¤ä»²¹Í¤Ë¤·¤¿¥½¡¼¥¹¤Ï¤½¤ì¤¾¤ì¤Ëµ­½Ò¤¹¤ë¡£
+; ä½¿ã„æ–¹ã‚„å‚è€ƒã«ã—ãŸã‚½ãƒ¼ã‚¹ã¯ãã‚Œãã‚Œã«è¨˜è¿°ã™ã‚‹ã€‚
 ;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; == ¥­¡¼¥Ğ¥¤¥ó¥É¤Ë´ØÏ¢¤¹¤ëÀßÄê
+; == ã‚­ãƒ¼ãƒã‚¤ãƒ³ãƒ‰ã«é–¢é€£ã™ã‚‹è¨­å®š
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; C-x C-c¤Ç Emacs ¤ò½ªÎ»¤·¤Ê¤¤¡£
+; C-x C-cã§ Emacs ã‚’çµ‚äº†ã—ãªã„ã€‚
 (global-unset-key "\C-x\C-c")
 (defalias 'quit-emacs 'save-buffers-kill-emacs)
 
-; C-z ¤Ç¤Î¥Õ¥ì¡¼¥à¤ò¥¢¥¤¥³¥ó²½¤òÍŞÀ©¤¹¤ë¡£
+; C-z ã§ã®ãƒ•ãƒ¬ãƒ¼ãƒ ã‚’ã‚¢ã‚¤ã‚³ãƒ³åŒ–ã‚’æŠ‘åˆ¶ã™ã‚‹ã€‚
 (global-unset-key "\C-z")
 
-; C-x p ¤Ç C-x o ¤ÎµÕ½ç¤Ë¥Õ¥ì¡¼¥à°ÜÆ°¤¹¤ë¡£
+; C-x p ã§ C-x o ã®é€†é †ã«ãƒ•ãƒ¬ãƒ¼ãƒ ç§»å‹•ã™ã‚‹ã€‚
 (global-set-key "\C-xp" (lambda () (interactive) (other-window -1)))
 
-; C-h ¤Ç backspace¡£
+; C-h ã§ backspaceã€‚
 ; c.f. http://www.fan.gr.jp/~ring/Meadow/meadow.html#back-space
 (keyboard-translate ?\C-h ?\C-?)
 (global-set-key "\C-h" nil)
 
-; M-& ¤ÇÂĞ±ş¤¹¤ë³ç¸Ì¤Ë¥«¡¼¥½¥ë¤ò°ÜÆ°¤¹¤ë¡£
+; M-& ã§å¯¾å¿œã™ã‚‹æ‹¬å¼§ã«ã‚«ãƒ¼ã‚½ãƒ«ã‚’ç§»å‹•ã™ã‚‹ã€‚
 (global-set-key "\M-&" 'match-paren)
 (defun match-paren (arg)
   "Go to the matching paren if on a paren; otherwise insert &."
@@ -36,70 +36,70 @@
         ((looking-at "\\s\)") (forward-char 1) (backward-list 1))
         (t (self-insert-command (or arg 1)))))
 
-; C-u ¤Ç¥«¡¼¥½¥ë°ÌÃÖ¤Ë¤¢¤ëÃ±¸ì¤ò¸µ man ¥Ú¡¼¥¸¤ò³«¤¯¡£
+; C-u ã§ã‚«ãƒ¼ã‚½ãƒ«ä½ç½®ã«ã‚ã‚‹å˜èªã‚’å…ƒ man ãƒšãƒ¼ã‚¸ã‚’é–‹ãã€‚
 (global-set-key "\C-u" nil)
 (global-set-key "\C-u" (lambda () (interactive) (manual-entry (current-word))))
 
-; M-/ ¤ÇÆ°ÅªÎ¬¾ÎÅ¸³«¤Îºİ¤Ë¸õÊä¤ÎÃ±¸ì¤ò¶¯Ä´É½¼¨¤¹¤ë¡£
+; M-/ ã§å‹•çš„ç•¥ç§°å±•é–‹ã®éš›ã«å€™è£œã®å˜èªã‚’å¼·èª¿è¡¨ç¤ºã™ã‚‹ã€‚
 ; http://www.namazu.org/~tsuchiya/elisp/dabbrev-highlight.el
 (require 'dabbrev-highlight)
 
-; dabbrev-highlight ¤Î´Á»ú¡¦Ê¿²¾Ì¾¤ò´Ş¤àÃ±¸ìÂĞ±ş¡£
+; dabbrev-highlight ã®æ¼¢å­—ãƒ»å¹³ä»®åã‚’å«ã‚€å˜èªå¯¾å¿œã€‚
 ; c.f. http://www.namazu.org/~tsuchiya/elisp/dabbrev-ja.el
 (load "dabbrev-ja")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; == ¥¦¥£¥ó¥É¥¦¥µ¥¤¥º¤Ê¤É¡¢¥Æ¥­¥¹¥È¤ÎÊÔ½¸¤Ë´ØÏ¢¤·¤Ê¤¤ÀßÄê
+; == ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã‚µã‚¤ã‚ºãªã©ã€ãƒ†ã‚­ã‚¹ãƒˆã®ç·¨é›†ã«é–¢é€£ã—ãªã„è¨­å®š
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; Emacs ¤Îµ¯Æ°¸å¤Ë¥Õ¥ì¡¼¥à¥µ¥¤¥º(½Ä¤ÎÄ¹¤µ)¤òºÇÂç¤Ë¤¹¤ë¡£Â¾¤Î´Ä¶­¤Ç¤Ï48
-; ¤¸¤ã¤Ê¤¤¤«¤â¡£
-; c.f. Emacs ¼­Åµ
+; Emacs ã®èµ·å‹•å¾Œã«ãƒ•ãƒ¬ãƒ¼ãƒ ã‚µã‚¤ã‚º(ç¸¦ã®é•·ã•)ã‚’æœ€å¤§ã«ã™ã‚‹ã€‚ä»–ã®ç’°å¢ƒã§ã¯48
+; ã˜ã‚ƒãªã„ã‹ã‚‚ã€‚
+; c.f. Emacs è¾å…¸
 (add-hook 'window-setup-hook
 	  (lambda () (set-frame-height (selected-frame) 48)) t)
 
-; ¥Õ¥ì¡¼¥à¤Î°ÌÃÖ¤òº¸¾å¤ÎÃ¼¤Ë¤¹¤ë¡£¥Õ¥Ã¥¯¤Ç¤ä¤é¤Ê¤¯¤Æ¤âº¸¾å¤Ë°ÜÆ°¤¹¤ë»ö
-; ¤¬¤Ç¤­¤ë¤¬¡¢¥Õ¥ì¡¼¥à¤Î¹â¤µ¤òÊÑ¹¹¤·¤¿»ş¤Ë¥ß¥Ë¥Ğ¥Ã¥Õ¥¡¤¬Âç¤­¤¯¤Ê¤Ã¤Æ¤·
-; ¤Ş¤¦¤Î¤ò ad-hoc ¤ËÂĞ±ş¤·¤Æ¤¤¤ë¡£
-; c.f. Emacs ¼­Åµ
+; ãƒ•ãƒ¬ãƒ¼ãƒ ã®ä½ç½®ã‚’å·¦ä¸Šã®ç«¯ã«ã™ã‚‹ã€‚ãƒ•ãƒƒã‚¯ã§ã‚„ã‚‰ãªãã¦ã‚‚å·¦ä¸Šã«ç§»å‹•ã™ã‚‹äº‹
+; ãŒã§ãã‚‹ãŒã€ãƒ•ãƒ¬ãƒ¼ãƒ ã®é«˜ã•ã‚’å¤‰æ›´ã—ãŸæ™‚ã«ãƒŸãƒ‹ãƒãƒƒãƒ•ã‚¡ãŒå¤§ãããªã£ã¦ã—
+; ã¾ã†ã®ã‚’ ad-hoc ã«å¯¾å¿œã—ã¦ã„ã‚‹ã€‚
+; c.f. Emacs è¾å…¸
 (add-hook 'window-setup-hook
   (lambda ()
     (set-frame-position (selected-frame) 1 1)
     (set-frame-position (selected-frame) 0 0)) t)
 
-; µ¯Æ°»ş¤Î¥á¥Ã¥»¡¼¥¸¤òÉ½¼¨¤·¤Ê¤¤¡£
+; èµ·å‹•æ™‚ã®ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’è¡¨ç¤ºã—ãªã„ã€‚
 (setq inhibit-startup-message t)
 
-; ¥Ä¡¼¥ë¥Ğ¡¼¤òÉ½¼¨¤·¤Ê¤¤¡£
+; ãƒ„ãƒ¼ãƒ«ãƒãƒ¼ã‚’è¡¨ç¤ºã—ãªã„ã€‚
 (when (eq system-type 'darwin)
   (tool-bar-mode 0))
 (when (not (eq system-type 'darwin))
   (tool-bar-mode nil))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; == ¤½¤ÎÂ¾¤ÎÀßÄê
+; == ãã®ä»–ã®è¨­å®š
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; ¥â¡¼¥É¥é¥¤¥ó(¥¦¥£¥ó¥É¥¦¤Î²¼¤ÎÈ¿Å¾É½¼¨¤µ¤ì¤Æ¤¤¤ë¡¤¹õ¤¤ÂÓ¾õ¤ÎÉôÊ¬)¤Ë¹ÔÆ¬
-; ¤«¤é¤ÎÊ¸»ú¿ô¤òÄÉ²Ã
+; ãƒ¢ãƒ¼ãƒ‰ãƒ©ã‚¤ãƒ³(ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã®ä¸‹ã®åè»¢è¡¨ç¤ºã•ã‚Œã¦ã„ã‚‹ï¼Œé»’ã„å¸¯çŠ¶ã®éƒ¨åˆ†)ã«è¡Œé ­
+; ã‹ã‚‰ã®æ–‡å­—æ•°ã‚’è¿½åŠ 
 ; c.f. http://homepage.mac.com/zenitani/elisp-j.html
 (column-number-mode t)
 
-; ÂĞ±ş¤¹¤ë³ç¸Ì¤ò¸÷¤é¤»¤ë¡£
+; å¯¾å¿œã™ã‚‹æ‹¬å¼§ã‚’å…‰ã‚‰ã›ã‚‹ã€‚
 (show-paren-mode 1)
 
-; Ã±¸ì¤Ë¶¯Ä´¤òÉÕ¤±¤ë¡£
+; å˜èªã«å¼·èª¿ã‚’ä»˜ã‘ã‚‹ã€‚
 (global-font-lock-mode t)
 
-; ¥Ş¡¼¥¯¤·¤¿ÎÎ°è¤ò¶¯Ä´É½¼¨¤¹¤ë
+; ãƒãƒ¼ã‚¯ã—ãŸé ˜åŸŸã‚’å¼·èª¿è¡¨ç¤ºã™ã‚‹
 ; c.f. http://www.ayu.ics.keio.ac.jp/~mukai/tips/dot-emacs.html
 (setq transient-mark-mode t)
 
-; fringe(º¸Â¦ÀŞ¤êÊÖ¤·ÉôÊ¬)¤Ç¥Õ¥¡¥¤¥ëËöÈø¤òÉ½¼¨¤¹¤ë¡£
+; fringe(å·¦å´æŠ˜ã‚Šè¿”ã—éƒ¨åˆ†)ã§ãƒ•ã‚¡ã‚¤ãƒ«æœ«å°¾ã‚’è¡¨ç¤ºã™ã‚‹ã€‚
 (setq-default indicate-empty-lines t)
 
-; switch-to-buffer ¤ÇÂ¸ºß¤·¤Ê¤¤¥Ğ¥Ã¥Õ¥¡¤ò»ØÄê¤·¤¿»ş¤Ë¿·¤·¤¤¥Ğ¥Ã¥Õ¥¡¤òºî
-; À®¤·¤Ê¤¤¡£
+; switch-to-buffer ã§å­˜åœ¨ã—ãªã„ãƒãƒƒãƒ•ã‚¡ã‚’æŒ‡å®šã—ãŸæ™‚ã«æ–°ã—ã„ãƒãƒƒãƒ•ã‚¡ã‚’ä½œ
+; æˆã—ãªã„ã€‚
 (defadvice switch-to-buffer (before existing-buffer activate compile)
   "When interactive, switch to existing buffers only,
    unless given a prefix argument."
@@ -108,33 +108,33 @@
                       (other-buffer)
                       (null current-prefix-arg)))))
 
-; Æ±°ì¥Õ¥¡¥¤¥ëÌ¾¤Î¥Ğ¥Ã¥Õ¥¡Ì¾¤ò¥æ¥Ë¡¼¥¯¤Ë¤¹¤ë¡£
+; åŒä¸€ãƒ•ã‚¡ã‚¤ãƒ«åã®ãƒãƒƒãƒ•ã‚¡åã‚’ãƒ¦ãƒ‹ãƒ¼ã‚¯ã«ã™ã‚‹ã€‚
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'post-forward-angle-brackets)
 (setq uniquify-ignore-buffers-re "*[^*]*")
 
-; shebang ¤Î½ñ¤«¤ì¤Æ¤¤¤ë¥Õ¥¡¥¤¥ë¤ÎÊİÂ¸»ş¤Ë¼«Æ°Åª¤Ë chmod +x ¤¹¤ë¡£
+; shebang ã®æ›¸ã‹ã‚Œã¦ã„ã‚‹ãƒ•ã‚¡ã‚¤ãƒ«ã®ä¿å­˜æ™‚ã«è‡ªå‹•çš„ã« chmod +x ã™ã‚‹ã€‚
 (add-hook 'after-save-hook
           'executable-make-buffer-file-executable-if-script-p)
 
-; diff ¤Î³ÎÇ§¤ò¹Ô¤¦»ş¤Î¥ª¥×¥·¥ç¥ó¤Ë -u ¤òÀßÄê¡£
+; diff ã®ç¢ºèªã‚’è¡Œã†æ™‚ã®ã‚ªãƒ—ã‚·ãƒ§ãƒ³ã« -u ã‚’è¨­å®šã€‚
 (setq diff-switches "-u")
 
-; rd-mode ¤òÍ­¸ú¤Ë¤¹¤ë¡£
+; rd-mode ã‚’æœ‰åŠ¹ã«ã™ã‚‹ã€‚
 ; (global-font-lock-mode 1)
 ; (autoload 'rd-mode "rd-mode" "major mode for ruby document formatter RD" t)
 ; (add-to-list 'auto-mode-alist '("\\.rd$" . rd-mode))
 
-; ¼«Æ°¤Ç¥¹¥Ú¥ë¥Á¥§¥Ã¥¯¤ò¹Ô¤¦¡£
+; è‡ªå‹•ã§ã‚¹ãƒšãƒ«ãƒã‚§ãƒƒã‚¯ã‚’è¡Œã†ã€‚
 (setq ispell-personal-dictionary "~/.emacs.d/dict/ispell")
-; TODO: °Ê²¼¤Î¤è¤¦¤Ë¤·¤Æ¡¢rd-mode ¤Î»ş¤Î¤ß¡¢flyspell-mode ¤¬Í­¸ú¤Ë¤Ê¤ë
-; ¤è¤¦¤Ë¤·¤¿¤¤¤¬¡¢Emacs ¤Îµ¯Æ°¤¬ÃÙ¤¯¤Ê¤ë¤Î¤Ç¤½¤ì¤ËÂĞ½è¤¹¤ë¡£
+; TODO: ä»¥ä¸‹ã®ã‚ˆã†ã«ã—ã¦ã€rd-mode ã®æ™‚ã®ã¿ã€flyspell-mode ãŒæœ‰åŠ¹ã«ãªã‚‹
+; ã‚ˆã†ã«ã—ãŸã„ãŒã€Emacs ã®èµ·å‹•ãŒé…ããªã‚‹ã®ã§ãã‚Œã«å¯¾å‡¦ã™ã‚‹ã€‚
 ;(setq ispell-silently-savep t)
 ;(add-hook 'rd-mode-hook
 ;    '(lambda()
 ;       (flyspell-mode t)))
 
-; 1¹Ô¤¬ÀŞ¤êÊÖ¤¹ÄøÄ¹¤¤¾ì¹ç¤Ë¤â¡¢C-p ¤ä C-n ¤Ç¸«¤¿ÌÜ¤Î¤Ş¤Ş°ÜÆ°¤¹¤ë¡£
+; 1è¡ŒãŒæŠ˜ã‚Šè¿”ã™ç¨‹é•·ã„å ´åˆã«ã‚‚ã€C-p ã‚„ C-n ã§è¦‹ãŸç›®ã®ã¾ã¾ç§»å‹•ã™ã‚‹ã€‚
 (global-set-key "\C-p" 'previous-window-line)
 (global-set-key "\C-n" 'next-window-line)
 (global-set-key [up] 'previous-window-line)
@@ -154,15 +154,15 @@
     (move-to-column (+ (current-column) cur-col)))
   (run-hooks 'auto-line-hook))
 
-; M-* ¤Ç kakasi ¥³¥Ş¥ó¥É¤ò»È¤Ã¤Æ¥«¡¼¥½¥ë°ÌÃÖ¤Ë¤¢¤ë´Á»ú¤ÎÆÉ¤ß¤ò
-; minibuffer ¤ËÉ½¼¨¤¹¤ë¡£
+; M-* ã§ kakasi ã‚³ãƒãƒ³ãƒ‰ã‚’ä½¿ã£ã¦ã‚«ãƒ¼ã‚½ãƒ«ä½ç½®ã«ã‚ã‚‹æ¼¢å­—ã®èª­ã¿ã‚’
+; minibuffer ã«è¡¨ç¤ºã™ã‚‹ã€‚
 (defun display-ruby-on-minibuffer ()
   (interactive)
   (shell-command (concat "echo \"" (current-word) "\" | kakasi -JH")))
 (global-set-key "\M-*" 'display-ruby-on-minibuffer)
 
-; cc-mode¡¢ruby-mode¡¢rd-mode ¤Ç¥¿¥Ö¤ÈÁ´³Ñ¥¹¥Ú¡¼¥¹¤Î¸«¤¿ÌÜ¤ò¤ï¤«¤ê¤ä¤¹
-; ¤¤¤â¤Î¤Ë¤¹¤ë¡£
+; cc-modeã€ruby-modeã€rd-mode ã§ã‚¿ãƒ–ã¨å…¨è§’ã‚¹ãƒšãƒ¼ã‚¹ã®è¦‹ãŸç›®ã‚’ã‚ã‹ã‚Šã‚„ã™
+; ã„ã‚‚ã®ã«ã™ã‚‹ã€‚
 ; c.f. http://homepage3.nifty.com/satomii/software/elisp.ja.html
 (require 'jaspace)
 (setq jaspace-modes '(cc-mode ruby-mode rd-mode text-mode))
