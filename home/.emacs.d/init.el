@@ -2,6 +2,13 @@
 ; TODO: 可能なら以下の形式とする(Spotlightからだとzshを経由しないのだろ
 ; う。PATHに/usr/local/binが含まれない)
 ; (setq exec-path (parse-colon-path (getenv "PATH")))
+
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(package-initialize)
+
 (when (eq system-type 'darwin)
       (setq exec-path
             (cons "/usr/local/bin" exec-path)))
@@ -13,7 +20,9 @@
            (add-to-list 'load-path path))
         (mapcar 'expand-file-name paths)))
 
-(require 'cask "~/.cask/cask.el")
+;(require 'cask)
+;(require 'cask "~/.cask/cask.el")
+(require 'cask "/usr/local/opt/cask/cask.el")
 (cask-initialize)
 
 (add-to-load-path
