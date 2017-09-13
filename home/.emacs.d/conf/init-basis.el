@@ -166,3 +166,7 @@
 ; c.f. http://homepage3.nifty.com/satomii/software/elisp.ja.html
 (require 'jaspace)
 (setq jaspace-modes '(cc-mode ruby-mode rd-mode text-mode))
+
+(prefer-coding-system 'utf-8)
+(setq coding-system-for-read 'utf-8)
+(setq coding-system-for-write 'utf-8)
