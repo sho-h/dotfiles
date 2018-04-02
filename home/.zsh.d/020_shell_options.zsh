@@ -19,10 +19,10 @@ setopt share_history
 
 # コマンド行からヒストリリストに追加されたものが古いものと全く同じ場合
 # に、古いものをリストから削除する(それが直前のイベントでなくても)。
-#setopt hist_ignore_all_dups
+setopt hist_ignore_all_dups
 # ヒストリファイルに書き出すときに、古いコマンドと同じものは無視する。
 setopt hist_save_nodups
-#setopt hist_ignore_dups
+setopt hist_ignore_dups
 
 #setopt hist_reduce_blanks
 
