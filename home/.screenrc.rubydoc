@@ -25,13 +25,13 @@ chdir $HOME/local/src/rubysrc/svn
 screen -t svn
 chdir $HOME/local/src/rubysrc/git
 screen -t git
-chdir $HOME/local/src/rubysrc/ruby-2.5.0-rc1
+chdir $HOME/local/src/rubysrc/ruby-2.5.1
 screen -t 2.5
-chdir $HOME/local/src/rubysrc/ruby-2.4.3
+chdir $HOME/local/src/rubysrc/ruby-2.4.4
 screen -t 2.4
-chdir $HOME/local/src/rubysrc/ruby-2.3.6
+chdir $HOME/local/src/rubysrc/ruby-2.3.7
 screen -t 2.3
-chdir $HOME/local/src/rubysrc/ruby-2.2.9
+chdir $HOME/local/src/rubysrc/ruby-2.2.10
 screen -t 2.2
 chdir $HOME/local/src/rubysrc/ruby-2.1.10
 screen -t 2.1
