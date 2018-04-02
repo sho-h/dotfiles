@@ -1,9 +1,18 @@
 # エイリアス。
 
 if [ "$COLOR_P" = "t" ]; then
-    alias ls='ls --color=auto -h'
-    alias dir='ls --color=auto --format=vertical'
-    alias vdir='ls --color=auto --format=long'
+  case ${OSTYPE} in
+    darwin*)
+      alias ls='ls -G -h'
+      alias dir='ls -G --format=vertical'
+      alias vdir='ls -G --format=long'
+      ;;
+    linux*)
+      alias ls='ls --color=auto -h'
+      alias dir='ls --color=auto --format=vertical'
+      alias vdir='ls --color=auto --format=long'
+      ;;
+  esac
 else
     alias ls='ls -h'
     alias dir='ls --format=vertical'
@@ -65,6 +74,8 @@ case ${OSTYPE} in
     hash -d desktop=$HOME/デスクトップ
     ;;
 esac
+
+export LESS='-i -g -R'
 
 # Local variables:
 # mode: sh
