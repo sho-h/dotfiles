@@ -31,20 +31,6 @@ chdir $HOME/local/src/rubysrc/ruby-2.4.4
 screen -t 2.4
 chdir $HOME/local/src/rubysrc/ruby-2.3.7
 screen -t 2.3
-chdir $HOME/local/src/rubysrc/ruby-2.2.10
-screen -t 2.2
-chdir $HOME/local/src/rubysrc/ruby-2.1.10
-screen -t 2.1
-chdir $HOME/local/src/rubysrc/ruby-2.0.0-p648
-screen -t 2.0.0
-chdir $HOME/local/src/rubysrc/ruby-1.9.3-p547
-screen -t 1.9.3
-chdir $HOME/local/src/rubysrc/ruby-1.9.2-p330
-screen -t 1.9.2
-chdir $HOME/local/src/rubysrc/ruby-1.9.1-p431
-screen -t 1.9.1
-chdir $HOME/local/src/rubysrc/ruby-1.8.7-p358
-screen -t 1.8.7
 chdir $HOME/local/src/misc/rurema
 screen -t misc/rurema
 chdir $HOME/
