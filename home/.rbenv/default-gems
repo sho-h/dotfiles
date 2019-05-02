@@ -1,6 +1,8 @@
 # rbenv install 時に併せてインストールする RubyGems パッケージリスト。
 # c.f. https://github.com/sstephenson/rbenv-default-gems
 bundler
+bundler-audit
+ruby_audit
 brewdler
 pry
 pry-byebug
