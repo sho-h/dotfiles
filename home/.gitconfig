@@ -4,7 +4,6 @@
     pager = "lv -c"
     quotepath = false
     excludesfile = /Users/sho-h/.gitignore
-    precomposeunicode = true
 [alias]
     st = status
     ci = commit
