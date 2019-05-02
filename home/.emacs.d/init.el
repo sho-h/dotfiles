@@ -68,3 +68,9 @@
 (global-set-key "\M-y" 'anything-show-kill-ring)
 ; 5文字以上を補完の対象とする。
 (setq anything-kill-ring-threshold 5)
+
+; Emacs 25.2までの脆弱性の一時対策。
+; c.f. https://lists.gnu.org/archive/html/emacs-devel/2017-09/msg00211.html
+(eval-after-load "enriched"
+  '(defun enriched-decode-display-prop (start end &optional param)
+     (list start end)))
