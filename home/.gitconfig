@@ -18,3 +18,5 @@
     lola = --graph --decorate --abbrev-commit --all --pretty=oneline
 [diff]
     renames = copies
+[pager]
+	branch = cat
